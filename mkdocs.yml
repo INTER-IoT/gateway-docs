@@ -1,0 +1,28 @@
+site_name: INTER-IoT Gateway
+site_description: 'Inter-IoT Gateway Documentation'
+site_author: 'Inter-IoT'
+
+theme: readthedocs
+
+repo_url: https://git.inter-iot.eu/Inter-IoT/gateway
+
+
+pages:
+    - Introduction: index.md
+    - User Guide:
+        - Getting Started: user-guide/getting-started.md
+        - Configuration: user-guide/configuration.md
+        - Advanced Documentation: user-guide/advanced-documentation.md
+    - Developer Guide:
+        - How to Contribute: developer-guide/how-to-contribute.md
+        - Basic Examples: developer-guide/basic-examples.md
+        - Javadocs: developer-guide/javadocs.md
+    - About:
+        - Release Notes: about/release-notes.md
+        - License: about/license.md
+
+copyright: Apache License 2.0
+
+extra:
+  version: latest
+  color: e67e22
