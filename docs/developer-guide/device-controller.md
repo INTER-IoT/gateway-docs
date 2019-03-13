@@ -1,11 +1,12 @@
 # How to develop a new Device Controller
 
-As explained in the [introduction](../../index.md) the Device Controller are physical gateway extensions
+As explained in the [introduction](../index.md) the Device Controller are physical gateway extensions
 specifically designed to add support for new device protocols.
 
 The following guide will show you how to create a basic device controller extension that you can use as a template to create your own.
 
 Requirements:
+
  - [JDK1.8+](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  - [Maven3+](https://maven.apache.org/install.html)
 
@@ -22,3 +23,24 @@ Follow these steps in order to create an example device controller extension:
 *\*change `maven-releases` to `maven-snapshots` in the url if you want to create a extension project for a snapshot version of the gateway*
 
 ## Structure of a device controller project
+
+The project will have the following structure:
+
+```
+<artifactId>
+├── pom.xml
+├── .gitignore
+└── src/
+    ├── deploy/
+    │   ├── conf.d/
+    │   │   └── 00.<artifactId>.properties
+    │   └── device-examples/
+    │       └── <artifactId>-device-01.json.example
+    └── main/
+        └── java/
+            └── <package>/
+                ├── Activator.java
+                └── ExampleDeviceController.java
+```
+
+ - The pom.xml file is your maven "[Project Object Model](https://maven.apache.org/pom.html)" containing all the details that maven needs to compile your project. Check in the [developer side notes](side-notes.md#extension-pom)
