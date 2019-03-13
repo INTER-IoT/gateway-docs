@@ -1,4 +1,4 @@
-# How to develop a new Device Controller
+# Device Controller Extension Development
 
 As explained in the [introduction](../index.md) the Device Controller are physical gateway extensions
 specifically designed to add support for new device protocols.
@@ -43,4 +43,5 @@ The project will have the following structure:
                 └── ExampleDeviceController.java
 ```
 
- - The pom.xml file is your maven "[Project Object Model](https://maven.apache.org/pom.html)" containing all the details that maven needs to compile your project. Check in the [developer side notes](side-notes.md#extension-pom)
+ - The `pom.xml` file is your maven "[Project Object Model](https://maven.apache.org/pom.html)" containing all the details that maven needs to compile your project. Check in the [developer side notes](side-notes.md#extension-pom)
+ - The `src/deploy` folder contains files that will be unpacked in the physical gateway 
