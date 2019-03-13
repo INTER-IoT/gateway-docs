@@ -15,9 +15,9 @@ pages:
         - Advanced Documentation: user-guide/advanced-documentation.md
     - Developer Guide:
         - How to Contribute: developer-guide/how-to-contribute.md
-        - Extension Development:
-          - Device Controller: developer-guide/device-controller.md
-        - Basic Examples: developer-guide/basic-examples.md
+        - Extension Development: developer-guide/extension-development.md
+        - Device Controller Extensions: developer-guide/device-controller.md
+        - Middleware Module Extensions: developer-guide/mw-module.md
         - Javadocs: developer-guide/javadocs.md
         - Side notes: developer-guide/side-notes.md
     - About:

@@ -44,4 +44,4 @@ The project will have the following structure:
 ```
 
  - The `pom.xml` file is your maven "[Project Object Model](https://maven.apache.org/pom.html)" containing all the details that maven needs to compile your project. Check in the [developer side notes](side-notes.md#extension-pom)
- - The `src/deploy` folder contains files that will be unpacked in the physical gateway 
+ - The `src/deploy` folder contains files that will be unpacked in the physical gateway once the extension is installed, such as configuration properties and device examples, see [this section](extension-development.md) for further details.
