@@ -11,7 +11,7 @@ pages:
     - Introduction: index.md
     - User Guide:
         - Getting Started: user-guide/getting-started.md
-        - Configuration: user-guide/configuration.md
+        - Supported Extensions: user-guide/supported-extensions.md
         - Advanced Documentation: user-guide/advanced-documentation.md
     - Developer Guide:
         - How to Contribute: developer-guide/how-to-contribute.md
