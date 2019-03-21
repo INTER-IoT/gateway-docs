@@ -9,3 +9,5 @@ linked from other sections of the documentation.
 ## Physical Gateway Configuration
 
 ## Virtual Gateway Configuration
+
+## Peer authentication

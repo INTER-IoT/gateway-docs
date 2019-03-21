@@ -7,6 +7,38 @@
  - Java 1.8 ([JRE](https://www.oracle.com/technetwork/es/java/javase/downloads/jre8-downloads-2133155.html) or [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) if you want to develop extensions)
  - [Download](https://github.com/INTER-IoT/gateway/releases) and unpack the latest version of the Physical or Virtual Gateway. You can also [downlad and compile it from the source code](advanced-documentation#compiling-from-source) if you prefer.
 
+### Installation files and folder structure
+
+```text
+(physical|virtual)-gateway
+├── bin/
+│   ├── run
+│   ├── run.cmd
+├── cache/
+|   └── (cache files...)
+├── certs/
+|   └── (certificate files...)
+├── conf.d/
+|   └── (configuration files...)
+├── core/
+|   └── (core OSGi bundles...)
+├── extensions/
+|   └── (extension OSGi bundles...)
+├── lib/
+|   └── (common lib OSGi bundles...)
+├── framework/
+|   └── (main jars added to classpath...)
+├── .uuid
+└── (other/specific physical and virtual files/folders)
+```
+
+ - Main executables are found under `bin/` folder, these are `bin\run` for linux/MacOS and `bin\run.cmd` for Windows.
+  - `conf.d/` folder contains configuration files, covered in the [next topic](getting-started.md#basic-configuration)
+  - `certs/` folder contains certificate files for peer authentication, more information available in the [advanced documentation section](advanced-documentation.md#peer-authentication)
+  - `core/`, `extensions/`, `lib/` and `framework/` contain the core and extension modules of the gateway. Will not be covered in the user guide but more information is available in the [developer guide](../developer-guide/extension-development.md)
+  - `.uuid` is a file containinig a unique identifier for the gateway. It will be deprecated with the usage of peer authentication certificates.
+  - Other files/folder such as device/rule definitions will be covered in the specific [physical]() and [virtual]() usage guide.
+
 ### Basic Configuration
 
  Either you are deploying the physical or virtual part of the Gateway, all configuration resides in the `conf.d/` directory. The configuration files
@@ -37,7 +69,7 @@ There are 3 types of extensions: **physical gateway extensions**, **virtual gate
 
  - **Virtual gateway extensions** add functionality to the gateway that need more computing power and would be a burden if they are running in the physical gateway device. The functionalities range from middleware modules to connect to IoT platforms, server and REST API to manage and query the gateway, rules engine to create simple rules and scripting, etc.
 
-To install extensions you have to download the zip file of the extension (you can try with some of our [supported extensions](supported-extensions.md)) and install it 
+To install extensions you have to download the zip file of the extension (you can try with some of our [supported extensions](supported-extensions.md)) and install them. Installing extensions is as simple as running the following command in the gateway distribution folder (either physical or virtual): `$ bin/run --install <path_to_extension_zip_file>`.
 
 ### Prerequisites
 
